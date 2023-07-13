@@ -1,0 +1,246 @@
+:root {
+    --orange: #ff6536;
+    --black: #000000;
+    --white: #fff;
+}
+
+/*******************horizontal-numbered***************/
+.horizontal-numbered {
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+}
+
+.horizontal-numbered li {
+    list-style-type: none;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.horizontal-numbered li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    display: block;
+    font-size: 14px;
+    color: var(--white);
+    background: var(--black);
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+    text-align: center;
+}
+
+.horizontal-numbered li:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: var(--black);
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+}
+
+.horizontal-numbered li:first-child:after {
+    content: none;
+}
+
+.horizontal-numbered li.active:before,
+.horizontal-numbered li.active:after {
+    background: var(--orange);
+    color: var(--white);
+}
+
+/*******************end horizontal-numbered***************/
+
+/*******************horizontal circle***************/
+.horizontal-circle {
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+}
+
+.horizontal-circle li {
+    list-style-type: none;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.horizontal-circle li:before {
+    content: '';
+    counter-increment: step;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    display: block;
+    font-size: 14px;
+    color: var(--white);
+    background: var(--black);
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+    text-align: center;
+}
+
+.horizontal-circle li:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: var(--black);
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+}
+
+.horizontal-circle li:first-child:after {
+    content: none;
+}
+
+.horizontal-circle li.active:before,
+.horizontal-circle li.active:after {
+    background: var(--orange);
+    color: var(--white);
+}
+
+/*******************end horizontal circle***************/
+
+/*******************end horizontal circle***************/
+.vertical-step {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.vertical-step li {
+    position: relative;
+    margin-left: 40px;
+    margin-top: 50px;
+    counter-increment: container 1;
+}
+
+.vertical-step li::before {
+    content: counter(container);
+    line-height: 22px;
+    text-align: center;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border: 1px solid var(--black);
+    border-radius: 50%;
+    left: -40px;
+    top: 0;
+    z-index: 10;
+    background-color: var(--black);
+    color: var(--white)
+}
+
+.vertical-step li::after {
+    content: '';
+    position: absolute;
+    height: 90px;
+    width: 2px;
+    background-color: var(--black);
+    z-index: 1;
+    left: -27px;
+    top: -70px;
+}
+
+.vertical-step li.active::after {
+    background-color: var(--orange);
+}
+
+.vertical-step li:first-child:after {
+    display: none;
+}
+
+.vertical-step li.active::before {
+    color: var(--white);
+    border: 1px solid #fff;
+    background-color: var(--orange);
+}
+
+.vertical-step li.active {
+    color: var(--orange);
+}
+.vertical-step li p{
+    position: absolute;
+    font-style: italic;
+    font-size: 12px;
+}
+
+/*******************end horizontal circle***************/
+
+/*******************vertical-icon-step***************/
+.vertical-icon-step {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.vertical-icon-step li {
+    position: relative;
+    margin-left: 40px;
+    margin-top: 60px;
+    counter-increment: container 1;
+}
+
+.vertical-icon-step li::before {
+    content: '';
+    line-height: 35px;
+    text-align: center;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border: 1px solid var(--black);
+    border-radius: 50%;
+    left: -40px;
+    top: 0;
+    z-index: 10;
+    background-color: var(--black);
+    color: var(--white)
+}
+
+.vertical-icon-step li::after {
+    content: '';
+    position: absolute;
+    height: 90px;
+    width: 2px;
+    background-color: var(--black);
+    z-index: 1;
+    left: -27px;
+    top: -70px;
+}
+
+.vertical-icon-step li.active::after {
+    background-color: var(--orange);
+}
+
+.vertical-icon-step li:first-child:after {
+    display: none;
+}
+
+.vertical-icon-step li.active::before {
+    color: var(--white);
+    border: 1px solid #fff;
+    background-color: var(--orange);
+}
+
+.vertical-icon-step li.active {
+    color: var(--orange);
+}
+.vertical-icon-step li p{
+    position: absolute;
+    font-style: italic;
+    font-size: 12px;
+}
+.vertical-icon-step li i{
+    position: absolute;
+    left: -31px;
+    color: var(--white);
+    z-index: 10;
+    top: 8px;
+}
+
+/*******************end vertical-icon-step***************/
