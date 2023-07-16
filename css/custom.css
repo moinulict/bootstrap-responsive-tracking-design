@@ -244,3 +244,12 @@
 }
 
 /*******************end vertical-icon-step***************/
+
+/*******************vertical-track-with-date-time***************/
+.track-root .order-track-text-stat {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+/*******************end vertical-track-with-date-time***************/
