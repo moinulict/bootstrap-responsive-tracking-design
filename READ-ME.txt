@@ -1,2 +1,2 @@
-Template Name    : TSS - Ecommerce Tracking Page
+Template Name    : Bootstrap Responsive Tracking Design
 

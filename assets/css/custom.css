@@ -1,24 +1,31 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
 :root {
     --orange: #ff6536;
     --black: #000000;
     --white: #fff;
+    --gray: #6c757d;
 }
-
-/*******************horizontal-numbered***************/
-.horizontal-numbered {
-    margin-bottom: 30px;
+.separator{
+    margin: 60px 0;
+}
+/*******************tss-horizontal-numbered***************/
+.tss-horizontal-numbered {
     overflow: hidden;
     counter-reset: step;
+    padding: 0;
 }
 
-.horizontal-numbered li {
+.tss-horizontal-numbered li {
     list-style-type: none;
     position: relative;
     width: 100%;
     text-align: center;
 }
 
-.horizontal-numbered li:before {
+.tss-horizontal-numbered li:before {
     content: counter(step);
     counter-increment: step;
     width: 24px;
@@ -33,7 +40,7 @@
     text-align: center;
 }
 
-.horizontal-numbered li:after {
+.tss-horizontal-numbered li:after {
     content: '';
     width: 100%;
     height: 3px;
@@ -44,33 +51,37 @@
     z-index: -1;
 }
 
-.horizontal-numbered li:first-child:after {
+.tss-horizontal-numbered li:first-child:after {
     content: none;
 }
 
-.horizontal-numbered li.active:before,
-.horizontal-numbered li.active:after {
+.tss-horizontal-numbered li.active:before,
+.tss-horizontal-numbered li.active:after {
     background: var(--orange);
     color: var(--white);
 }
-
-/*******************end horizontal-numbered***************/
+@media only screen and (max-width: 375px) {
+    .tss-horizontal-numbered li {
+      font-size: 13px;
+    }
+  }
+/*******************end tss-horizontal-numbered***************/
 
 /*******************horizontal circle***************/
-.horizontal-circle {
-    margin-bottom: 30px;
+.tss-horizontal-circle {
     overflow: hidden;
     counter-reset: step;
+    padding: 0;
 }
 
-.horizontal-circle li {
+.tss-horizontal-circle li {
     list-style-type: none;
     position: relative;
     width: 100%;
     text-align: center;
 }
 
-.horizontal-circle li:before {
+.tss-horizontal-circle li:before {
     content: '';
     counter-increment: step;
     width: 24px;
@@ -85,7 +96,7 @@
     text-align: center;
 }
 
-.horizontal-circle li:after {
+.tss-horizontal-circle li:after {
     content: '';
     width: 100%;
     height: 3px;
@@ -96,12 +107,12 @@
     z-index: -1;
 }
 
-.horizontal-circle li:first-child:after {
+.tss-horizontal-circle li:first-child:after {
     content: none;
 }
 
-.horizontal-circle li.active:before,
-.horizontal-circle li.active:after {
+.tss-horizontal-circle li.active:before,
+.tss-horizontal-circle li.active:after {
     background: var(--orange);
     color: var(--white);
 }
@@ -109,19 +120,20 @@
 /*******************end horizontal circle***************/
 
 /*******************end horizontal circle***************/
-.vertical-step {
+.tss-vertical-step {
     list-style: none;
-    margin-top: 30px;
 }
 
-.vertical-step li {
+.tss-vertical-step li {
     position: relative;
     margin-left: 40px;
     margin-top: 50px;
     counter-increment: container 1;
 }
-
-.vertical-step li::before {
+.tss-vertical-step li:first-child {
+    margin-top: 0px;
+}
+.tss-vertical-step li::before {
     content: counter(container);
     line-height: 22px;
     text-align: center;
@@ -137,7 +149,7 @@
     color: var(--white)
 }
 
-.vertical-step li::after {
+.tss-vertical-step li::after {
     content: '';
     position: absolute;
     height: 90px;
@@ -148,24 +160,25 @@
     top: -70px;
 }
 
-.vertical-step li.active::after {
+.tss-vertical-step li.active::after {
     background-color: var(--orange);
 }
 
-.vertical-step li:first-child:after {
+.tss-vertical-step li:first-child:after {
     display: none;
 }
 
-.vertical-step li.active::before {
+.tss-vertical-step li.active::before {
     color: var(--white);
     border: 1px solid #fff;
     background-color: var(--orange);
 }
 
-.vertical-step li.active {
+.tss-vertical-step li.active {
     color: var(--orange);
 }
-.vertical-step li p{
+
+.tss-vertical-step li p {
     position: absolute;
     font-style: italic;
     font-size: 12px;
@@ -173,20 +186,22 @@
 
 /*******************end horizontal circle***************/
 
-/*******************vertical-icon-step***************/
-.vertical-icon-step {
+/*******************tss-vertical-icon-step***************/
+.tss-vertical-icon-step {
     list-style: none;
-    margin-top: 30px;
+    margin-bottom: 35px;
 }
 
-.vertical-icon-step li {
+.tss-vertical-icon-step li {
     position: relative;
     margin-left: 40px;
     margin-top: 60px;
     counter-increment: container 1;
 }
-
-.vertical-icon-step li::before {
+.tss-vertical-icon-step li:first-child{
+    margin-top: 0px;
+}
+.tss-vertical-icon-step li::before {
     content: '';
     line-height: 35px;
     text-align: center;
@@ -202,40 +217,42 @@
     color: var(--white)
 }
 
-.vertical-icon-step li::after {
+.tss-vertical-icon-step li::after {
     content: '';
     position: absolute;
     height: 90px;
     width: 2px;
     background-color: var(--black);
     z-index: 1;
-    left: -27px;
+    left: -24px;
     top: -70px;
 }
 
-.vertical-icon-step li.active::after {
+.tss-vertical-icon-step li.active::after {
     background-color: var(--orange);
 }
 
-.vertical-icon-step li:first-child:after {
+.tss-vertical-icon-step li:first-child:after {
     display: none;
 }
 
-.vertical-icon-step li.active::before {
+.tss-vertical-icon-step li.active::before {
     color: var(--white);
     border: 1px solid #fff;
     background-color: var(--orange);
 }
 
-.vertical-icon-step li.active {
+.tss-vertical-icon-step li.active {
     color: var(--orange);
 }
-.vertical-icon-step li p{
+
+.tss-vertical-icon-step li p {
     position: absolute;
     font-style: italic;
     font-size: 12px;
 }
-.vertical-icon-step li i{
+
+.tss-vertical-icon-step li i {
     position: absolute;
     left: -31px;
     color: var(--white);
@@ -243,13 +260,63 @@
     top: 8px;
 }
 
-/*******************end vertical-icon-step***************/
+/*******************end tss-vertical-icon-step***************/
 
-/*******************vertical-track-with-date-time***************/
-.track-root .order-track-text-stat {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 0px;
+/*******************vertical-track-with-time***************/
+.tss-track-container .step {
+    display: flex;
+    height: 6rem;
+    margin-left: 30px;
 }
 
-/*******************end vertical-track-with-date-time***************/
+.tss-track-container .step:last-child .status span:last-of-type {
+    display: none;
+}
+
+.tss-track-container .status {
+    margin-right: 15px;
+    position: relative;
+    margin-top: 4px;
+}
+
+.tss-track-container .status .dot {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: var(--orange);
+}
+
+.tss-track-container .status .line {
+    display: block;
+    margin: 0 auto;
+    width: 2px;
+    height: 6rem;
+    background: var(--orange);
+}
+
+.tss-track-container .text p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    line-height: 120%;
+}
+
+.tss-track-container .text span {
+    font-size: 13px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gray);
+}
+
+.track-diff {
+    position: absolute;
+    right: 15px;
+    line-height: 15px;
+    top: -65px;
+    width: 45px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/*******************end vertical-track-with-time***************/
